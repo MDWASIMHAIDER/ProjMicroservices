@@ -1,0 +1,11 @@
+#Server Config
+server:
+  port: 9090
+  
+#ViewResolver Config
+spring:
+  mvc:
+    view:
+      prefix: /views/
+      suffix: .jsp
+  

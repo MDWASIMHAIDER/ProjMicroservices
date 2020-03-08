@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    password: null
+    url: jdbc:h2:mem:testdb
+    username: sa
+    platform: h2
+  application:
+    name: CurrencyExchange
+    
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+ 
+ 
+ #eureka:
+#  client-url:
+#    :defaultZone: http://localhost:8761/eureka/
+ 

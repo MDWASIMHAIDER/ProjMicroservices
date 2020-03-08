@@ -1,0 +1,4 @@
+com\nt\service\ContactService.class
+com\nt\model\Contact.class
+com\nt\test\ContactTest.class
+com\nt\dao\ContactDAO.class

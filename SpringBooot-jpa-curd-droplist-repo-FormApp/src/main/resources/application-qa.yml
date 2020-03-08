@@ -1,0 +1,6 @@
+
+#Ui Msg Config
+formapp:
+  message:
+    regSucces: Registration Successful-QA
+    regFailure: Registration Failure

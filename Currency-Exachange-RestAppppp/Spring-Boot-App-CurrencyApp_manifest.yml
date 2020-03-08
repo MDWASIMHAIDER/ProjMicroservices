@@ -1,0 +1,8 @@
+applications:
+- name: Spring-Boot-App-CurrencyApp
+  disk_quota: 1G
+  instances: 1
+  memory: 1G
+  routes:
+  - route: spring-boot-app-currencyapp.cfapps.io
+  stack: cflinuxfs3

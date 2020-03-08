@@ -1,0 +1,59 @@
+create table TagMasterEntity(TAG_MASTER_ID number(10),TAG_ID number(10),
+							VEHICLE_REG_NUM varchar2(16),VEHICLE_TYPE varchar2(10),
+							TAG_START_DT Date,TAG_EXPIRY_DT Date,
+							TAG_BAL number(10),USER_ID number(8),CREATE_DT Date,
+							UPDATE_DT Date,CREATED_BY varchar2(20),UPDATED_BY varchar2(20));
+
+create sequence TagMaster_seq start with 1 increment by 1;
+create sequence UserMaster_TAG_ID_seq start with 1 increment by 1;
+
+##################################################################
+create table TagTransactionTriggerEntity(TRG_ID number(8),TAG_ID number(8),
+										VHCL_REG_NUM varchar2(16),TOLL_PLAZA_ID number(6),
+										TOLL_AMT number(10),TX_STATUS varchar2(12),
+										TX_FAILURE_RSN varchar2(20),REMINDER_MSG_SW varchar2(6),
+										CREATE_DT Date,UPDATE_DT Date,CREATED_BY varchar2(15),UPDATED_BY varchar2(15));
+
+create sequence TagTransaction_seq start with 1 increment by 1;
+create sequence TOLL_PLAZA_SEQ start with 1 increment by 1;
+
+##################################################################
+create table UserMasterEntity(USER_ID number(8) primary key,FIRST_NAME varchar2(20),
+							 LAST_NAME varchar2(16),EMAIL_ID varchar2(30),MOBILE_NUM number(12),
+							 GENDER varchar2(6),CREATE_DT Date,UPDATE_DT Date,
+							 CREATED_BY varchar2(25),UPDATED_BY varchar2(25));
+
+create sequence UserMaster_seq start with 1 increment by 1;
+
+
+##########################################################################
+
+
+
+create or replace procedure USER_MASTER
+is
+user_id number;
+tag_id number;
+no number(6):=1;
+begin
+while (no <= 5000)
+loop
+select UserMaster_seq.nextval into user_id from dual;
+select UserMaster_TAG_ID_seq.nextval into tag_id from dual;
+insert into User_Master_Entity(USER_ID,FIRST_NAME,LAST_NAME,EMAIL_ID,MOBILE_NUM,GENDER)
+ values(user_id,'MD WASIM','HAIDER','WASIM.HAIDER91@GMAIL.COM',9473442689,'MALE');
+ 
+ insert into Tag_Master_Entity(TAG_MASTER_ID,TAG_ID,VEHICLE_REG_NUM,VEHICLE_TYPE,TAG_BAL,USER_ID) 
+				values(TagMaster_seq.nextval,tag_id,
+						'UP-12A-09','Four Wheel',600,user_id);
+						
+insert into Tag_Transaction_Trigger_Entity(TRG_ID,TAG_ID,VHCL_REG_NUM,
+										TOLL_PLAZA_ID,TOLL_AMT,TX_STATUS,
+										TX_FAILURE_RSN,REMINDER_MSG_SW)
+ values(TagTransaction_seq.nextval,tag_id,'UP-12A-09',TOLL_PLAZA_SEQ.nextval,400,'FAILED','LOW BAL','P');
+no:=no+1;
+end loop;
+end;
+/
+exec USER_MASTER;
+

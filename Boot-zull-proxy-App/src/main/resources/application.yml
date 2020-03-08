@@ -1,0 +1,23 @@
+server:
+  port: 7777
+spring:
+  application:
+    name: ZullProxyApp
+    
+#Request Routing Config
+zuul:
+  prefix: /api
+  routes: 
+    greet:
+      path: /totalcost/**
+      serviceId: CURRENCYAPP
+    exchange:
+      path: /getData/**
+      serviceId: CURRENCYCONVERTER
+#Actuators Config      
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        

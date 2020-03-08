@@ -1,0 +1,17 @@
+#Server Config
+server:
+  port: 9090
+  servlet:
+ #Context Config
+    context-path: /UserRegistrationApp
+#ViewResolver Config
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+ #Profile Config
+  profiles:
+    active: dev
+    
+    

@@ -1,0 +1,3 @@
+com\nt\model\Contact.class
+com\nt\service\ContactService.class
+com\nt\dao\ContactDAO.class

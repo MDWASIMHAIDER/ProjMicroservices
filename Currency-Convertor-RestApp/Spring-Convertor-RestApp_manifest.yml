@@ -1,0 +1,8 @@
+applications:
+- name: Spring-Convertor-RestApp
+  disk_quota: 1G
+  instances: 1
+  memory: 1G
+  routes:
+  - route: spring-convertor-restapp.cfapps.io
+  stack: cflinuxfs3

@@ -1,0 +1,21 @@
+01-11-2019 12:17:43.547 [restartedMain] INFO  c.logging.LoggingTestAppApplication.logStarting - Starting LoggingTestAppApplication on wasim-PC with PID 9628 (D:\projectTest\Demo\LoggingTestApp\target\classes started by wasim in D:\projectTest\Demo\LoggingTestApp)
+01-11-2019 12:17:43.549 [restartedMain] INFO  c.logging.LoggingTestAppApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+01-11-2019 12:17:43.886 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 9090 (http)
+01-11-2019 12:17:43.888 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+01-11-2019 12:17:43.888 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.26]
+01-11-2019 12:17:43.906 [restartedMain] INFO  o.a.c.c.C.[Tomcat-3].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+01-11-2019 12:17:43.907 [restartedMain] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 354 ms
+01-11-2019 12:17:43.974 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
+01-11-2019 12:17:44.012 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
+01-11-2019 12:17:44.031 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 9090 (http) with context path ''
+01-11-2019 12:17:44.031 [restartedMain] INFO  c.logging.LoggingTestAppApplication.logStarted - Started LoggingTestAppApplication in 0.514 seconds (JVM running for 6505.151)
+01-11-2019 12:17:44.033 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener.onApplicationEvent - Condition evaluation unchanged
+01-11-2019 12:17:53.445 [http-nio-9090-exec-1] INFO  o.a.c.c.C.[Tomcat-3].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+01-11-2019 12:17:53.448 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+01-11-2019 12:17:53.453 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 4 ms
+01-11-2019 12:17:53.454 [http-nio-9090-exec-1] TRACE c.l.controller.loggingController.showLogs - A TRACE Message
+01-11-2019 12:17:53.454 [http-nio-9090-exec-1] DEBUG c.l.controller.loggingController.showLogs - A DEBUG Message
+01-11-2019 12:17:53.455 [http-nio-9090-exec-1] INFO  c.l.controller.loggingController.showLogs - An INFO Message
+01-11-2019 12:17:53.455 [http-nio-9090-exec-1] WARN  c.l.controller.loggingController.showLogs - A WARN Message
+01-11-2019 12:17:53.455 [http-nio-9090-exec-1] ERROR c.l.controller.loggingController.showLogs - An ERROR Message
+01-11-2019 12:20:35.992 [Thread-127] INFO  o.s.s.c.ThreadPoolTaskExecutor.shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
